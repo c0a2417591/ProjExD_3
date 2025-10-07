@@ -144,7 +144,7 @@ class Score:
     """
     スコアに関するクラス
     """
-    def __init__(self, color: tuple[int, int, int], sc: int):
+    def __init__(self):
         """
         引数に基づき、文字列Surfaceを生成する
         引数１ color： 文字列の色タプル
@@ -177,7 +177,7 @@ def main():
     bombs = [Bomb((255, 0, 0), 10) for _ in range(NUM_OF_BOMBS)] #爆弾用の空のリスト
     beam = None  # ゲーム初期化時にはビームは存在しない
     beams = []
-    score = Score((0, 0, 255), 0) #スコアの表示
+    score = Score() #スコアの表示
     clock = pg.time.Clock()
     tmr = 0
     while True:
